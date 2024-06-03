@@ -24,5 +24,4 @@ def handle_500(request):
 
 def get_500(request):
     # Ligne ajoutée pour provoquer une erreur 500
-    print('on passe par la view')
     raise Exception("Ceci est une erreur 500 test.")
