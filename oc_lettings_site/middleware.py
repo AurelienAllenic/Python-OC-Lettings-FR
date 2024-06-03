@@ -1,8 +1,7 @@
 from django.http import HttpResponse
 
-# Dans un fichier middleware.py de votre application
-class CustomExceptionMiddleware:
 
+class CustomExceptionMiddleware:
     def __init__(self, get_response):
         self.get_response = get_response
 
