@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from .models import Profile
 from sentry_sdk import capture_exception, capture_message
 
+
 def profiles_index(request):
     """
     Get all profile objects and call the index.html
@@ -15,6 +16,7 @@ def profiles_index(request):
         raise e
     context = {'profiles_list': profiles_list}
     return render(request, 'profiles/index.html', context)
+
 
 def profile(request, username):
     """
