@@ -46,7 +46,7 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
 
     - name: Push Docker image to Docker Hub
-      run: docker push myapp:${{ github.sha }}
+      run: docker push ${{ secrets.DOCKER_USERNAME }}/myapp:${{ github.sha }}
 
     - name: Output Docker run command
       run: "echo 'Run the following command to pull and run the Docker image locally: docker run -p 8000:8000 myapp:${{ github.sha }}'"
