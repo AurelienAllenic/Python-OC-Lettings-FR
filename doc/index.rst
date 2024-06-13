@@ -16,8 +16,8 @@ This documentation covers the setup, usage, and other details of the OC Lettings
    structure
    requirements
    local_use
-   sentry_dsngithub_actions
-
+   sentry_dsn
+   github_actions
 
 Indices and tables
 ==================
