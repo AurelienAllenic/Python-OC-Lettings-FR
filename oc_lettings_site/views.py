@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from sentry_sdk import capture_exception, capture_message
 
+
 def index(request):
     """
     Render the index.html template.

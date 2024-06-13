@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from .models import Letting
 from sentry_sdk import capture_exception, capture_message
 
+
 def lettings_index(request):
     """
     Get all lettings from the database and
@@ -14,7 +15,9 @@ def lettings_index(request):
         capture_exception(e)
         raise e
     context = {'lettings_list': lettings_list}
+
     return render(request, 'lettings/index.html', context)
+
 
 def letting(request, letting_id):
     """
